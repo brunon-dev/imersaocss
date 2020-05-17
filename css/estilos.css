@@ -8,7 +8,7 @@
 body {
   background-image: url('../img/fundo.jpg');
   background-size: auto 100vh;
-  font-family: Arial;
+  font-family: 'Source Code Pro', monospace;
   height: 100vh;
   font-size: 10px;
 }
@@ -70,11 +70,51 @@ a:hover {
   text-align: center;
 }
 
+.site-title {
+  font-family: 'Permanent Marker', cursive;
+}
+
 .site-subtitle {
-  font-style: italic;
+  font-family: 'Source Code Pro', monospace;
+  line-height: 1.8em;
+}
+
+.portfolio {
+  padding: 2em;
+}
+
+.portfolio h2 {
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  margin-bottom: 1.5em;
+}
+
+.portfolio .grid {
+  display: grid;
+  gap: 2em;
+  justify-content: center;
+  height: calc(100vh - 1.5em -1.5em) /* tamanho completo da tela menos tamanho da fonte do H2 e tamanho da margem bottom do H2 */
+}
+
+@media (min-width: 560px) {
+  .portfolio .grid {
+    grid-template-columns: 240px 240px;
+  }
+}
+
+@media (min-width: 880px) {
+  .portfolio .grid {
+    grid-template-columns: repeat(3, 240px);
+  }
+}
+
+.portfolio figure {
+  text-align: center;
 }
 
 .img-portfolio {
   width: 180px;
-  height: 180px;
+  height: 240px;
+  object-fit: cover;
+  object-position: left bottom;
 }
